@@ -46,7 +46,7 @@ def load_audio(file, sr):
         )
     except Exception as e:
         traceback.print_exc()
-        raise RuntimeError(f"Failed to load audio: {e}")
+        raise RuntimeError(f"Failed to load audio: {e} {file}")
 
     return np.frombuffer(out, np.float32).flatten()
 
